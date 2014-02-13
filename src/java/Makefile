@@ -13,7 +13,7 @@ ifeq ($(UNAME), Darwin)
 JNI_FLAGS  = -I /System/Library/Frameworks/JavaVM.framework/Headers -I /System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Headers
 endif
 ifeq ($(UNAME), Linux)
-JNI_FLAGS  = -I$(JAVA_HOME)/include -I$(JAVA_HOME)/include/linux
+JNI_FLAGS  = -I$(JAVA_HOME)/include -I$(JAVA_HOME)/include/linux -fPIC
 endif
 
 all: $(TARGET)
